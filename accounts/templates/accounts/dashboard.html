@@ -19,12 +19,14 @@
                 <tr>
                     <th>Customer</th>
                     <th>Phone</th>
+                    <td></td>
                 </tr>
 
                 {%for customer in customers%}
                     <tr>
                         <td>{{customer.name}}</td>
                         <td>{{customer.phone}}</td>
+                        <td><a href=" {% url 'Customer' customer.id %}" class="btn btn-info">View</a></td>
                     </tr>
                 {%endfor%}
                 
